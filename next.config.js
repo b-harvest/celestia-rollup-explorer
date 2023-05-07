@@ -13,6 +13,8 @@ module.exports = {
       "ipfs.infura.io",
       "aws1.discourse-cdn.com",
     ],
+    loader: 'akamai',
+    path: '',
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
