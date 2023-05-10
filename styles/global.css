@@ -1,5 +1,11 @@
 /* @font-face { */
-  /* font-family: "DungGeunMo"; */
-  /* font-weight: 400; */
-  /* src: url("/fonts/DungGeunMo.woff"); */
+/* font-family: "DungGeunMo"; */
+/* font-weight: 400; */
+/* src: url("/fonts/DungGeunMo.woff"); */
 /* } */
+
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400&display=swap");
+
+.nav-title {
+  font-family: "Dosis", sans-serif;
+}

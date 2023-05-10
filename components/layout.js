@@ -53,10 +53,10 @@ const Layout = ({ children }) => {
 
   return (
     <AppShell
-      style={{ 
+      style={{
         paddingRight: "calc(0px + 16px)",
         backgroundImage: `url('https://celestia.org/static/header-bg-861e0242f0c2149da928dd01d1c3a486.png')`,
-        backgroundRepeat: 'no-repeat',
+        backgroundRepeat: "no-repeat",
         margin: "-100px 0px 0px 0px",
         padding: "130px 0px 0px 0px",
       }}
@@ -68,7 +68,7 @@ const Layout = ({ children }) => {
       navbar={
         <MediaQuery largerThan="sm" styles={{ display: "none" }}>
           <Navbar
-            style={{ 
+            style={{
               marginTop: "70px",
             }}
             padding="md"
@@ -106,7 +106,7 @@ const Layout = ({ children }) => {
         </MediaQuery>
       }
       header={
-        <Header height={70} padding="md">
+        <Header height={80} padding="md" style={{ backgroundColor: "#7b2bf9", border: "none" }}>
           {/* Handle other responsive styles with MediaQuery component or createStyles function */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "100%" }}>
             <div style={{ display: "flex" }}>
@@ -123,18 +123,20 @@ const Layout = ({ children }) => {
 
               <MediaQuery smallerThan="sm" styles={{ display: "none !important" }}>
                 <div style={{ display: "flex", cursor: "pointer" }}>
-                  <Image width="120" height="60" src="/images/celestia/Celestia-logo-purple.png" alt="" />
+                  <Image width="80" height="80" src="/images/celestia/celestia-logo.png" alt="" />
                   <Link href="/" passHref>
                     <Text
                       style={{
-                        color:"#666",
+                        color: "#fff",
                         fontWeight: "bold",
+                        letterSpacing: "0.1em",
                         fontSize: "28px",
                         marginLeft: "10px",
                         alignSelf: "center",
                       }}
+                      className="nav-title"
                     >
-                      Rollup Explorer
+                      CELESTIA ROLLUP EXPLORER
                     </Text>
                   </Link>
                 </div>
@@ -142,7 +144,7 @@ const Layout = ({ children }) => {
             </div>
 
             <div style={{ display: "flex", alignItems: "center" }}>
-              <Input
+              {/* <Input
                 value={search}
                 onChange={setSearch}
                 onKeyDown={(e) => {
@@ -155,7 +157,7 @@ const Layout = ({ children }) => {
                 style={{ marginRight: "20px", width: "300px" }}
                 variant="default"
                 placeholder="Search function is not enabled"
-              />
+              /> */}
               <MediaQuery smallerThan="sm" styles={{ display: "none !important" }}>
                 <CHeader style={{ display: "flex" }}>
                   <Link href="/chains" passHref>
@@ -170,8 +172,6 @@ const Layout = ({ children }) => {
                 </CHeader>
               </MediaQuery>
             </div>
-
-
           </div>
         </Header>
       }
