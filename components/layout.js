@@ -250,7 +250,7 @@ const Layout = ({ children }) => {
             }}
           >
             {" "}
-            <div className="" style={{ marginRight: "8px", fontWeight: "600" }}>
+            <div className="" style={{ marginRight: "8px", fontWeight: "700" }}>
               Powered by
             </div>
             <Image width="104" height="24" src="/images/b-harvest.png" alt="" />
