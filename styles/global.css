@@ -4,7 +4,7 @@
 /* src: url("/fonts/DungGeunMo.woff"); */
 /* } */
 
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500;600&display=swap");
 
 .font-dosis {
   font-family: "Dosis", sans-serif;

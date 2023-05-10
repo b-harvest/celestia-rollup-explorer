@@ -57,6 +57,7 @@ const Layout = ({ children }) => {
         paddingRight: "calc(0px + 16px)",
         backgroundImage: `url('https://celestia.org/static/header-bg-861e0242f0c2149da928dd01d1c3a486.png')`,
         backgroundRepeat: "no-repeat",
+
         margin: "-100px 0px 0px 0px",
         padding: "130px 0px 0px 0px",
       }}
@@ -217,7 +218,45 @@ const Layout = ({ children }) => {
         </Header>
       }
     >
-      <Text>{children}</Text>
+      <Text style={{ maxWidth: "1024px", margin: "0 auto" }}>
+        {children}{" "}
+        <div
+          style={{
+            textAlign: "center",
+            height: "48px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: "20px",
+          }}
+        >
+          <div
+            className="font-dosis"
+            style={{
+              color: "black",
+              fontSize: "18px",
+              background:
+                "linear-gradient(90deg, rgba(83,37,119,1) 0%, rgba(139,32,218,1) 49%, rgba(123,43,249,1) 100%)",
+              color: "#fff",
+              borderRadius: "48px",
+              display: "flex",
+              justifyItems: "center",
+              alignItems: "center",
+              padding: "12px 24px",
+              fontSize: "18px",
+              letterSpacing: "2px",
+
+              color: "#fff",
+            }}
+          >
+            {" "}
+            <div className="" style={{ marginRight: "8px", fontWeight: "600" }}>
+              Powered by
+            </div>
+            <Image width="104" height="24" src="/images/b-harvest.png" alt="" />
+          </div>
+        </div>
+      </Text>
     </AppShell>
   );
 };
