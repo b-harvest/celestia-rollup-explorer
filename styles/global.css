@@ -4,8 +4,15 @@
 /* src: url("/fonts/DungGeunMo.woff"); */
 /* } */
 
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap");
 
-.nav-title {
+.font-dosis {
   font-family: "Dosis", sans-serif;
+}
+.nav-icon-invert {
+  filter: "brightness(0) invert(1)";
+}
+.nav-link {
+  font-size: 16px !important;
+  letter-spacing: 1px;
 }

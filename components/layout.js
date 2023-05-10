@@ -106,9 +106,22 @@ const Layout = ({ children }) => {
         </MediaQuery>
       }
       header={
-        <Header height={80} padding="md" style={{ backgroundColor: "#7b2bf9", border: "none" }}>
+        <Header
+          height={80}
+          padding="md"
+          style={{ backgroundColor: "hsla(0,0%,100%,.65)", border: "none", backdropFilter: "blur(10px)" }}
+        >
           {/* Handle other responsive styles with MediaQuery component or createStyles function */}
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "100%" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              height: "100%",
+              margin: "0 auto",
+              maxWidth: "1024px",
+            }}
+          >
             <div style={{ display: "flex" }}>
               <MediaQuery largerThan="sm" styles={{ display: "none" }}>
                 <Burger
@@ -123,18 +136,23 @@ const Layout = ({ children }) => {
 
               <MediaQuery smallerThan="sm" styles={{ display: "none !important" }}>
                 <div style={{ display: "flex", cursor: "pointer" }}>
-                  <Image width="80" height="80" src="/images/celestia/celestia-logo.png" alt="" />
+                  <div
+                    className="nav-icon-invert"
+                    style={{ filter: "brightness(0%)", display: "flex", alignItems: "center" }}
+                  >
+                    <Image width="60" height="60" src="/images/celestia/icon-purple.png" alt="" />
+                  </div>
                   <Link href="/" passHref>
                     <Text
                       style={{
-                        color: "#fff",
+                        color: "#000",
                         fontWeight: "bold",
                         letterSpacing: "0.1em",
-                        fontSize: "28px",
+                        fontSize: "18px",
                         marginLeft: "10px",
                         alignSelf: "center",
                       }}
-                      className="nav-title"
+                      className="font-dosis"
                     >
                       CELESTIA ROLLUP EXPLORER
                     </Text>
@@ -161,13 +179,13 @@ const Layout = ({ children }) => {
               <MediaQuery smallerThan="sm" styles={{ display: "none !important" }}>
                 <CHeader style={{ display: "flex" }}>
                   <Link href="/chains" passHref>
-                    <CText>Rollups</CText>
+                    <CText className="font-dosis nav-link">Rollups</CText>
                   </Link>
                   <Link href="/blocks" passHref>
-                    <CText>Blocks</CText>
+                    <CText className="font-dosis nav-link">Blocks</CText>
                   </Link>
                   <Link href="/blobs" passHref>
-                    <CText>Blobs</CText>
+                    <CText className="font-dosis nav-link">Blobs</CText>
                   </Link>
                 </CHeader>
               </MediaQuery>
