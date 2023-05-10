@@ -15,4 +15,8 @@
 .nav-link {
   font-size: 16px !important;
   letter-spacing: 1px;
+  opacity: 1;
+}
+.nav-active {
+  border-bottom: 2px solid #000;
 }

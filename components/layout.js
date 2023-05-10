@@ -178,14 +178,37 @@ const Layout = ({ children }) => {
               /> */}
               <MediaQuery smallerThan="sm" styles={{ display: "none !important" }}>
                 <CHeader style={{ display: "flex" }}>
+                  <Link href="/" passHref>
+                    <CText
+                      className={router.pathname == "/" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"}
+                    >
+                      Overview
+                    </CText>
+                  </Link>
                   <Link href="/chains" passHref>
-                    <CText className="font-dosis nav-link">Rollups</CText>
+                    <CText
+                      className={
+                        router.pathname == "/chains" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"
+                      }
+                    >
+                      Rollups
+                    </CText>
                   </Link>
                   <Link href="/blocks" passHref>
-                    <CText className="font-dosis nav-link">Blocks</CText>
+                    <CText
+                      className={
+                        router.pathname == "/blocks" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"
+                      }
+                    >
+                      Blocks
+                    </CText>
                   </Link>
                   <Link href="/blobs" passHref>
-                    <CText className="font-dosis nav-link">Blobs</CText>
+                    <CText
+                      className={router.pathname == "/blobs" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"}
+                    >
+                      Blobs
+                    </CText>
                   </Link>
                 </CHeader>
               </MediaQuery>
