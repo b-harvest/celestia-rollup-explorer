@@ -134,15 +134,34 @@ const Layout = ({ children }) => {
             }}
           >
             <div style={{ display: "flex" }}>
-              <MediaQuery largerThan="sm" styles={{ display: "none" }}>
-                <Burger
-                  style={{ alignSelf: "center" }}
-                  opened={opened}
-                  onClick={() => setOpened((o) => !o)}
-                  size="sm"
-                  color={theme.colors.gray[6]}
-                  mr="xl"
-                />
+              <MediaQuery largerThan="sm" styles={{ display: "none !important;" }}>
+                <div style={{ display: "flex", width: "calc(100vw - 32px)", justifyContent: "space-between" }}>
+                  <Burger
+                    style={{ alignSelf: "center", backgroundColor: "black" }}
+                    opened={opened}
+                    onClick={() => setOpened((o) => !o)}
+                    size="sm"
+                    color={"white"}
+                  />
+                  <div
+                    style={{ filter: "brightness(0%)", display: "flex", alignItems: "center" }}
+                    className="nav-icon-invert"
+                  >
+                    <img
+                      className={`${isScrolled > 15 ? "nav-logo-scrolled" : "nav-logo"}`}
+                      style={{ transition: "all 0.3s", width: "52px" }}
+                      src="/images/celestia/icon-purple.png"
+                      alt=""
+                    />
+                    <div
+                      className="font-dosis"
+                      style={{ letterSpacing: "2px", marginLeft: "4px", fontWeight: "700", fontSize: "18px" }}
+                    >
+                      ROLLUP EXPLORER
+                    </div>
+                  </div>
+                  <div style={{ width: "28px" }}></div>
+                </div>
               </MediaQuery>
 
               <MediaQuery smallerThan="sm" styles={{ display: "none !important" }}>
