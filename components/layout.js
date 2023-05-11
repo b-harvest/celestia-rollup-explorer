@@ -56,8 +56,9 @@ const Layout = ({ children }) => {
       padding={{ sm: 0 }}
       style={{
         paddingRight: "calc(0px + 16px)",
-        backgroundImage: `url('https://celestia.org/static/header-bg-861e0242f0c2149da928dd01d1c3a486.png')`,
+        backgroundImage: `url('https://celestia.org/static/header-bg-861e0242f0c2149da928dd01d1c3a486.png') no-repeat scroll top transparent`,
         backgroundRepeat: "no-repeat",
+        backgroundSize: "140% 520px",
         margin: "-100px 0px 0px 0px",
         padding: "130px 0px 0px 0px",
       }}
@@ -240,13 +241,12 @@ const Layout = ({ children }) => {
 
               alignItems: "center",
               padding: "8px 24px",
-              paddingTop: "440px",
+              paddingTop: "420px",
               fontSize: "14px",
               letterSpacing: "2px",
               color: "#fff",
             }}
           >
-            <div></div>
             <div className="" style={{ marginRight: "8px", fontWeight: "700" }}>
               This website is maintained by
             </div>

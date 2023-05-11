@@ -42,7 +42,7 @@ const Main = () => {
   return (
     <main>
       <SimpleGrid
-        style={{ padding: "10px 80px 0 80px" }}
+        style={{ padding: "30px 80px 0 80px" }}
         cols={1}
         spacing="lg"
         breakpoints={[
