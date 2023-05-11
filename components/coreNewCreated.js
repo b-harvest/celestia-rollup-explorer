@@ -6,19 +6,21 @@ import { useStore } from "../utils/store";
 function CoreNewCreated({ elements }) {
   const rows = elements?.map((element, idx) => (
     <tr key={idx}>
-      <td><a href={element?.href}>{element?.nid}</a></td>
+      <td>
+        <a href={element?.href}>{element?.nid}</a>
+      </td>
       <td>{element?.chainId}</td>
       <td>{element?.time}</td>
     </tr>
   ));
-  elements?.forEach(function(element) {
+  elements?.forEach(function (element) {
     element.href = "/rollups/" + element.nid;
   });
 
   return (
     <Table>
       <thead>
-        <tr>
+        <tr className="font-dosis">
           <th>Namespace ID</th>
           <th>Chain ID</th>
           <th>Time</th>
