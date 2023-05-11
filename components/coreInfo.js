@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 const CoreInfo = ({ data, rpc }) => {
   return (
     <>
-      <div style={{ margin: "80px auto 20px auto" }} className="summary-card">
+      <div style={{ margin: "80px auto 20px auto" }} className="basic-card">
         <div className="card-title">Status</div>
         <SimpleGrid
           style={{ padding: "0 0px", margin: "0px 0px 0px 0px" }}
@@ -28,8 +28,8 @@ const CoreInfo = ({ data, rpc }) => {
 
             <div className="half-detail-row ">
               <div className="detail-card half-detail">
-                <div className="card-body__title">Chain ID</div>
-                <div className="card-body__body">{rpc?.result.block.header.chain_id}</div>
+                <div className="card-body__title">Total Rollup TXs</div>
+                <div className="card-body__body">{data?.cntTXs}</div>
               </div>
               <div className="detail-card half-detail">
                 <div className="card-body__title">Total Rollup Blobs</div>
@@ -39,12 +39,12 @@ const CoreInfo = ({ data, rpc }) => {
 
             <div className="half-detail-row ">
               <div className="detail-card half-detail">
-                <div className="card-body__title">Latest Block</div>
-                <div className="card-body__body">{rpc?.result.block.header.height}</div>
+                <div className="card-body__title">Chain ID</div>
+                <div className="card-body__body">{rpc?.result.block.header.chain_id}</div>
               </div>
               <div className="detail-card half-detail">
-                <div className="card-body__title">Total Rollup TXs</div>
-                <div className="card-body__body">{data?.cntTXs}</div>
+                <div className="card-body__title">Latest Block</div>
+                <div className="card-body__body">{rpc?.result.block.header.height}</div>
               </div>
             </div>
             <div className="last-updated-text">Last updated at {rpc?.result.block.header.time}</div>

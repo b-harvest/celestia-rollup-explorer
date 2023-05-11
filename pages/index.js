@@ -42,7 +42,7 @@ const Main = () => {
   return (
     <main>
       <SimpleGrid
-        style={{ padding: "10px 80px" }}
+        style={{ padding: "10px 80px 0 80px" }}
         cols={1}
         spacing="lg"
         breakpoints={[
@@ -61,23 +61,25 @@ const Main = () => {
           { maxWidth: 840, cols: 1, spacing: "sm" },
         ]}
       >
-        <div>
-          <Text style={{ color: "#444", fontSize: "24px", margin: "0px 0 20px 0px", fontWeight: "bold" }} align="left">
-            Most TXed Chains
-          </Text>
-          <CoreTOP10TXed elements={coreSummary?.top10TXedNIDs} />
-        </div>
-        <div>
-          <Text style={{ color: "#444", fontSize: "24px", margin: "0px 0 20px 0px", fontWeight: "bold" }} align="left">
-            Most Highest Chains
-          </Text>
-          <CoreTOPHeight elements={coreSummary?.topHeightNIDs} />
-        </div>
-        <div>
-          <Text style={{ color: "#444", fontSize: "24px", margin: "20px 0 20px 0px", fontWeight: "bold" }} align="left">
-            New Chains
-          </Text>
-          <CoreNewCreated elements={coreSummary?.newCreatedNIDs} />
+        <div className="card-wrraper">
+          <div className="basic-card">
+            <Text className="card-title" align="left">
+              🔥 Most TX Chains
+            </Text>
+            <CoreTOP10TXed elements={coreSummary?.top10TXedNIDs} />
+          </div>
+          <div className="basic-card">
+            <Text className="card-title" align="left">
+              ⛰ Highest Chains
+            </Text>
+            <CoreTOPHeight elements={coreSummary?.topHeightNIDs} />
+          </div>
+          <div className="basic-card">
+            <Text className="card-title" align="left">
+              🚀 New Chains
+            </Text>
+            <CoreNewCreated elements={coreSummary?.newCreatedNIDs} />
+          </div>
         </div>
       </SimpleGrid>
       <Divider style={{ margin: "60px 0 60px 0" }} />
