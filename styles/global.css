@@ -17,13 +17,56 @@
 .nav-icon-invert {
   filter: "brightness(0) invert(1)";
 }
+
+.nav-active {
+  border-bottom: 2px solid #000;
+}
+
+.header {
+  transition: all 0.5s;
+}
+
+.nav-logo-scrolled {
+  width: 60px;
+}
+
+.nav-logo {
+  width: 76px;
+}
+
+.nav-title {
+  font-size: 22px;
+}
+
+.nav-title-scrolled {
+  font-size: 18px;
+}
+
 .nav-link {
+  font-size: 18px !important;
+  letter-spacing: 1px;
+  opacity: 1;
+
+  transition: all 0.3s;
+}
+
+.nav-link-scrolled {
   font-size: 16px !important;
   letter-spacing: 1px;
   opacity: 1;
+
+  transition: all 0.3s;
 }
-.nav-active {
-  border-bottom: 2px solid #000;
+
+.header-not-scrolled {
+  background-color: transparent;
+  border: none;
+}
+
+.header-scrolled {
+  background-color: hsla(0, 0%, 100%, 0.65);
+  border: none;
+  backdrop-filter: blur(10px);
 }
 
 .basic-card {

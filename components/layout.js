@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ActionIcon,
   AppShell,
@@ -48,9 +48,17 @@ const Layout = ({ children }) => {
   const setUser = useStore((state) => state.setUser);
   const [search, setSearch] = useInputState("");
   const router = useRouter();
+  const [isScrolled, setIsScrolled] = useState(0);
   const theme = useMantineTheme();
   const [setWallet, setNetworkId] = useStore((state) => [state.setWallet, state.setNetworkId]);
+  useEffect(() => {
+    const onScroll = (e) => {
+      setIsScrolled(Number(e.target.documentElement.scrollTop));
+    };
+    window.addEventListener("scroll", onScroll);
 
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
     <AppShell
       padding={{ sm: 0 }}
@@ -112,8 +120,7 @@ const Layout = ({ children }) => {
         <Header
           height={80}
           padding="md"
-          className="header-box-shadow"
-          style={{ backgroundColor: "hsla(0,0%,100%,.65)", border: "none", backdropFilter: "blur(10px)" }}
+          className={`header ${isScrolled > 15 ? " header-scrolled header-box-shadow" : "header-not-scrolled "} `}
         >
           {/* Handle other responsive styles with MediaQuery component or createStyles function */}
           <div
@@ -144,7 +151,12 @@ const Layout = ({ children }) => {
                     className="nav-icon-invert"
                     style={{ filter: "brightness(0%)", display: "flex", alignItems: "center" }}
                   >
-                    <Image width="60" height="60" src="/images/celestia/icon-purple.png" alt="" />
+                    <img
+                      className={`${isScrolled > 15 ? "nav-logo-scrolled" : "nav-logo"}`}
+                      style={{ transition: "all 0.3s" }}
+                      src="/images/celestia/icon-purple.png"
+                      alt=""
+                    />
                   </div>
                   <Link href="/" passHref>
                     <Text
@@ -152,11 +164,11 @@ const Layout = ({ children }) => {
                         color: "#000",
                         fontWeight: "bold",
                         letterSpacing: "0.1em",
-                        fontSize: "18px",
+                        transition: "all 0.3s",
                         marginLeft: "10px",
                         alignSelf: "center",
                       }}
-                      className="font-dosis"
+                      className={`font-dosis ${isScrolled > 15 ? "nav-title-scrolled" : "nav-title"}`}
                     >
                       CELESTIA ROLLUP EXPLORER
                     </Text>
@@ -184,32 +196,36 @@ const Layout = ({ children }) => {
                 <CHeader style={{ display: "flex" }}>
                   <Link href="/" passHref>
                     <CText
-                      className={router.pathname == "/" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"}
+                      className={`${
+                        router.pathname == "/" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"
+                      } ${isScrolled > 15 ? "nav-link-scrolled" : "nav-link"}`}
                     >
                       Overview
                     </CText>
                   </Link>
                   <Link href="/chains" passHref>
                     <CText
-                      className={
+                      className={`${
                         router.pathname == "/chains" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"
-                      }
+                      } ${isScrolled > 15 ? "nav-link-scrolled" : "nav-link"}`}
                     >
                       Rollups
                     </CText>
                   </Link>
                   <Link href="/blocks" passHref>
                     <CText
-                      className={
+                      className={`${
                         router.pathname == "/blocks" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"
-                      }
+                      } ${isScrolled > 15 ? "nav-link-scrolled" : "nav-link"}`}
                     >
                       Blocks
                     </CText>
                   </Link>
                   <Link href="/blobs" passHref>
                     <CText
-                      className={router.pathname == "/blobs" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"}
+                      className={`${
+                        router.pathname == "/blobs" ? "nav-active font-dosis nav-link" : "font-dosis nav-link"
+                      } ${isScrolled > 15 ? "nav-link-scrolled" : "nav-link"}`}
                     >
                       Blobs
                     </CText>
