@@ -56,9 +56,10 @@ const Layout = ({ children }) => {
       padding={{ sm: 0 }}
       style={{
         paddingRight: "calc(0px + 16px)",
-        backgroundImage: `url('https://celestia.org/static/header-bg-861e0242f0c2149da928dd01d1c3a486.png') no-repeat scroll top transparent`,
+        backgroundImage: `url('https://celestia.org/static/header-bg-861e0242f0c2149da928dd01d1c3a486.png') `,
         backgroundRepeat: "no-repeat",
         backgroundSize: "140% 520px",
+
         margin: "-100px 0px 0px 0px",
         padding: "130px 0px 0px 0px",
       }}
