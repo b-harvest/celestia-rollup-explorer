@@ -82,7 +82,7 @@ const Main = () => {
           </div>
         </div>
       </SimpleGrid>
-      <Divider style={{ margin: "60px 0 60px 0" }} />
+      {/* <Divider style={{ margin: "60px 0 60px 0" }} /> */}
     </main>
   );
 };

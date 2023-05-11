@@ -227,12 +227,12 @@ const Layout = ({ children }) => {
       >
         <div sytle={{ display: "flex", justifyItems: "center" }}>
           <div
-            className="font-dosis"
+            className="font-dosis footer-gradient"
             style={{
               color: "black",
               fontSize: "18px",
-              background:
-                "linear-gradient(90deg, rgba(83,37,119,1) 0%, rgba(139,32,218,1) 49%, rgba(123,43,249,1) 100%)",
+              // background:
+              //   "linear-gradient(90deg, rgba(83,37,119,1) 0%, rgba(139,32,218,1) 49%, rgba(123,43,249,1) 100%)",
               color: "#fff",
 
               display: "flex",
@@ -240,14 +240,15 @@ const Layout = ({ children }) => {
 
               alignItems: "center",
               padding: "8px 24px",
+              paddingTop: "440px",
               fontSize: "14px",
               letterSpacing: "2px",
               color: "#fff",
             }}
           >
-            {" "}
+            <div></div>
             <div className="" style={{ marginRight: "8px", fontWeight: "700" }}>
-              Powered by
+              This website is maintained by
             </div>
             <Image width="80" height="18" src="/images/b-harvest.png" alt="" />
           </div>

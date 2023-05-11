@@ -111,3 +111,15 @@
   /* max-width: 400px !important; */
   /* background-color: red !important; */
 }
+
+.footer-gradient {
+  background: url("https://celestia.org/static/footer-bg-21a6de3bc4a66ffd2d39d24b28e5ced4.png") no-repeat scroll bottom
+    transparent;
+  background-size: 100% 500px;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  height: 500px;
+}
