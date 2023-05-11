@@ -107,7 +107,10 @@
   font-size: 24px;
   padding-bottom: 16px;
   line-height: 24px;
+  padding-right: 4px;
+  padding-left: 4px;
   color: #000;
+  word-break: break-all;
 }
 
 .card-body__body-purple {
@@ -135,7 +138,7 @@
 .last-updated-text {
   text-align: right;
   margin-top: 12px;
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.5;
 }
 

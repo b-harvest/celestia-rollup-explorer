@@ -58,7 +58,7 @@ const Main = () => {
   return rpcBlockResult ? (
     <main>
       <SimpleGrid
-        style={{ padding: "30px 80px 0 80px" }}
+        style={{ padding: "30px 12px" }}
         cols={1}
         spacing="lg"
         breakpoints={[
