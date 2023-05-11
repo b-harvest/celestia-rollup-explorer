@@ -166,3 +166,13 @@
   z-index: -1;
   height: 500px;
 }
+
+.loading {
+  min-height: 100vh;
+  display: flex;
+}
+
+.loading > img {
+  margin: auto;
+  width: 40%;
+}
