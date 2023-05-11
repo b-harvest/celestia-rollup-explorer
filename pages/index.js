@@ -16,28 +16,21 @@ const Main = () => {
   const [coreInfo, setCoreInfo] = useState(null);
   const [coreSummary, setCoreSummary] = useState(null);
   const [rpcBlockResult, setRpcBlockResult] = useState(null);
-  
+
   const [ranking, setRanking] = useState(null);
   const [topUsers, setTopUsers] = useState(null);
 
   const getRanking = async () => {
     try {
-      const {
-        data: coreInfo,
-      } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/explorer/core/info`);
+      const { data: coreInfo } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/explorer/core/info`);
       setCoreInfo(coreInfo);
 
-      const {
-        data: coreSummary,
-      } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/explorer/core/summary`);
+      const { data: coreSummary } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/explorer/core/summary`);
       setCoreSummary(coreSummary);
 
-      const {
-        data: rpcBlockResult,
-      } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_CORE_RPC_URL}/block`);
+      const { data: rpcBlockResult } = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_CORE_RPC_URL}/block`);
       setRpcBlockResult(rpcBlockResult);
       console.log(rpcBlockResult);
-      
     } catch (e) {
       console.log(e);
     }
@@ -53,12 +46,11 @@ const Main = () => {
         cols={1}
         spacing="lg"
         breakpoints={[
-          { maxWidth: 1160, cols: 1, spacing: "md" },
+          { maxWidth: 1024, cols: 1, spacing: "md" },
           { maxWidth: 840, cols: 1, spacing: "sm" },
         ]}
       >
-        
-      <CoreInfo data={coreInfo} rpc={rpcBlockResult}/>
+        <CoreInfo data={coreInfo} rpc={rpcBlockResult} />
       </SimpleGrid>
       <SimpleGrid
         style={{ padding: "10px 80px" }}
@@ -71,19 +63,19 @@ const Main = () => {
       >
         <div>
           <Text style={{ color: "#444", fontSize: "24px", margin: "0px 0 20px 0px", fontWeight: "bold" }} align="left">
-          Most TXed Chains
+            Most TXed Chains
           </Text>
           <CoreTOP10TXed elements={coreSummary?.top10TXedNIDs} />
         </div>
         <div>
           <Text style={{ color: "#444", fontSize: "24px", margin: "0px 0 20px 0px", fontWeight: "bold" }} align="left">
-          Most Highest Chains
+            Most Highest Chains
           </Text>
           <CoreTOPHeight elements={coreSummary?.topHeightNIDs} />
         </div>
         <div>
           <Text style={{ color: "#444", fontSize: "24px", margin: "20px 0 20px 0px", fontWeight: "bold" }} align="left">
-          New Chains
+            New Chains
           </Text>
           <CoreNewCreated elements={coreSummary?.newCreatedNIDs} />
         </div>

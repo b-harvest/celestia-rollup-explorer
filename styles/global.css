@@ -9,6 +9,11 @@
 .font-dosis {
   font-family: "Dosis", sans-serif;
 }
+.header-box-shadow {
+  box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.25);
+}
 .nav-icon-invert {
   filter: "brightness(0) invert(1)";
 }
@@ -19,4 +24,73 @@
 }
 .nav-active {
   border-bottom: 2px solid #000;
+}
+
+.summary-card {
+  /* border: 1px solid; */
+  background-color: hsla(0, 0%, 100%, 0.65);
+  max-width: 600px;
+  width: 100%;
+  margin: auto 0;
+  border-radius: 8px;
+  opacity: 1;
+  backdrop-filter: blur(20px);
+  padding: 24px 20px;
+  box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 10px 8px 10px -5px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+  font-family: "Dosis", sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.card-body__title {
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+
+  padding: 16px 0;
+}
+
+.card-body__body {
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 1px;
+  font-size: 24px;
+  padding-bottom: 16px;
+  line-height: 24px;
+  color: #000;
+}
+
+.card-body__body-purple {
+  color: #7b2bf9 !important;
+  font-size: 32px;
+}
+
+.detail-card {
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.half-detail-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.half-detail {
+  width: 50%;
+}
+
+.last-updated-text {
+  text-align: right;
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.5;
 }
