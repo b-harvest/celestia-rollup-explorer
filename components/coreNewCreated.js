@@ -4,6 +4,9 @@ import Jazzicon from "react-jazzicon/lib/Jazzicon";
 import { useStore } from "../utils/store";
 
 function CoreNewCreated({ elements }) {
+  elements?.forEach(function (element) {
+    element.href = "/rollups/" + element.nid;
+  });
   const rows = elements?.map((element, idx) => (
     <tr key={idx}>
       <td>
@@ -13,9 +16,6 @@ function CoreNewCreated({ elements }) {
       <td>{element?.time}</td>
     </tr>
   ));
-  elements?.forEach(function (element) {
-    element.href = "/rollups/" + element.nid;
-  });
 
   return (
     <Table>
