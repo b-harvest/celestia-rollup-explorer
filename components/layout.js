@@ -286,7 +286,7 @@ const Layout = ({ children }) => {
             <div className="" style={{ marginRight: "8px", fontWeight: "700" }}>
               This website is maintained by
             </div>
-            <Image width="80" height="18" src="/images/b-harvest.png" alt="" />
+            <img width="80" height="18" src="/images/b-harvest.png" alt="" />
           </div>
         </div>
       </div>
