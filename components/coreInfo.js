@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 const CoreInfo = ({ data, rpc }) => {
   return (
     <>
-      <div style={{ margin: "80px auto 20px auto", maxWidth: "864px" }} className="basic-card">
+      <div style={{ margin: "0px auto 20px auto", maxWidth: "864px" }} className="basic-card">
         <div className="card-title">Status</div>
         <SimpleGrid
           style={{ padding: "0 0px", margin: "0px 0px 0px 0px" }}

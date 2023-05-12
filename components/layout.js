@@ -68,8 +68,8 @@ const Layout = ({ children }) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "140% 520px",
 
-        margin: "-100px 0px 0px 0px",
-        padding: "130px 0px 0px 0px",
+        margin: "0px 0px 0px 0px",
+        padding: "100px 0px 0px 0px",
       }}
       // https://celestia.org/static/header-bg-861e0242f0c2149da928dd01d1c3a486.png
       // navbarOffsetBreakpoint controls when navbar should no longer be offset with padding-left
@@ -99,18 +99,18 @@ const Layout = ({ children }) => {
               </Link>
             </CButton>
             <CButton variant="white" onClick={() => setOpened(!opened)}>
-              <Link href="/explore-collections" passHref>
-                <CText>Explore</CText>
+              <Link href="/chains" passHref>
+                <CText>Rollups</CText>
               </Link>
             </CButton>
             <CButton variant="white" onClick={() => setOpened(!opened)}>
-              <Link href="/create" passHref>
-                <CText>Create</CText>
+              <Link href="/blocks" passHref>
+                <CText>Blocks</CText>
               </Link>
             </CButton>
             <CButton variant="white" onClick={() => setOpened(!opened)}>
-              <Link href="/gganbu" passHref>
-                <CText>GGanbu</CText>
+              <Link href="/blobs" passHref>
+                <CText>Blobs</CText>
               </Link>
             </CButton>
           </Navbar>
