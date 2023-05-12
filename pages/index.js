@@ -69,15 +69,15 @@ const Main = () => {
         <CoreInfo data={coreInfo} rpc={rpcBlockResult} />
       </SimpleGrid>
       <SimpleGrid
-        style={{ padding: "10px 80px" }}
+        style={{ padding: "10px 12px" }}
         cols={2}
         spacing="lg"
         breakpoints={[
-          { maxWidth: 1160, cols: 2, spacing: "md" },
+          { maxWidth: 1024, cols: 1, spacing: "md" },
           { maxWidth: 840, cols: 1, spacing: "sm" },
         ]}
       >
-        <div className="card-wrraper">
+        {/* <div className="card-wrraper"> */}
           <div className="basic-card">
             <Text className="card-title" align="left">
               🔥 Most TX Chains
@@ -96,7 +96,7 @@ const Main = () => {
             </Text>
             <CoreNewCreated elements={coreSummary?.newCreatedNIDs} />
           </div>
-        </div>
+        {/* </div> */}
       </SimpleGrid>
       {/* <Divider style={{ margin: "60px 0 60px 0" }} /> */}
     </main>
