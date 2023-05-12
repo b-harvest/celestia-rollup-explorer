@@ -4,6 +4,9 @@ import Jazzicon from "react-jazzicon/lib/Jazzicon";
 import { useStore } from "../utils/store";
 
 function CoreTOP10TXed({ elements }) {
+  elements?.forEach(function (element) {
+    element.href = "/rollups/" + element.nid;
+  });
   const rows = elements?.map((element, idx) => (
     <tr key={idx}>
       <td>
@@ -13,9 +16,6 @@ function CoreTOP10TXed({ elements }) {
       <td>{element?.cnt}</td>
     </tr>
   ));
-  elements?.forEach(function (element) {
-    element.href = "/rollups/" + element.nid;
-  });
 
   return (
     <Table>
